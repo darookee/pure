@@ -73,7 +73,7 @@ prompt_pure_precmd() {
 
     [[ ! -w $PWD ]] && _prompt_pwd_color='%F{red}' || _prompt_pwd_color='%F{blue}'
     [[ ! -O $PWD && -w $PWD ]] && _prompt_pwd_color='%F{yellow}'
-    local prompt_pure_preprompt="\n${_prompt_pwd_color}%~%F{242}$vcs_info_msg_0_`prompt_pure_git_dirty` $prompt_pure_username%f %F{yellow}`prompt_pure_cmd_exec_time`%f"
+    local prompt_pure_preprompt="\n${_prompt_pwd_color}%~%F{242}\$vcs_info_msg_0_`prompt_pure_git_dirty` $prompt_pure_username%f %F{yellow}`prompt_pure_cmd_exec_time`%f"
     print -P $prompt_pure_preprompt
 
     # check async if there is anything to pull
