@@ -468,6 +468,7 @@ prompt_pure_setup() {
 
 	# prompt turns red if the previous command didn't exit with 0
 	PROMPT+='%(?.%F{magenta}.%F{red})${PURE_PROMPT_SYMBOL:-❯}%f '
+    RPROMPT="%F{242}%D{%a, %F (%V)} %F{white}%D{%H:%M}%f"
 }
 
 prompt_pure_setup "$@"
